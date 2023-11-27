@@ -1,0 +1,69 @@
+.button-container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    float: left;
+    display: block; /* Ensure the button container is displayed as a block element */
+    margin-bottom: 20px; /* Add margin below div1 */
+
+  }
+  
+  .button-container + .left-Container{
+    margin-bottom: 5px;
+  }
+  .bannerBtn,
+  .ibdpRbtn,
+  .mypRbtn,
+  .igcseRbtn,
+  .competitionbtn {
+    width: 175px;
+    height: 54px;
+    background: #FFF; /* Initial background color (white) */
+    border: 2px solid #724B39;
+    border-radius: 10px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #392A23;
+    text-decoration: none; /* Remove underline */
+    font-size: var(--unnamed-font-size-20);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-family: var(--unnamed-font-family-poppins);
+    line-height: var(--unnamed-line-spacing-30);
+    transition: 0.3s; /* Add smooth transition */
+  }
+  
+  .bannerBtn:hover,
+  .ibdpRbtn:hover,
+  .mypRbtn:hover,
+  .igcseRbtn:hover,
+  .competitionbtn:hover {
+    background: #F3E2C8; /* Change background color on hover */
+  }
+  
+  .bannerBtn:active,
+  .ibdpRbtn:active,
+  .mypRbtn:active,
+  .igcseRbtn:active,
+  .competitionbtn:active {
+    background: #F3E2C8; /* Keep the same color when clicked */
+  }
+  
+  .mypRbtn {
+    left: 664px;
+  }
+  
+  .igcseRbtn {
+    left: 825px;
+  }
+  
+  .competitionbtn {
+    left: 1004px;
+  }
+
+  .editaddtagline + .button-container{
+    margin-top: 50px;
+  }

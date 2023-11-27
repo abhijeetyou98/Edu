@@ -1,0 +1,509 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+
+}
+
+.sidebar
+{
+	filter: drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.161));
+	overflow: visible;
+	position: absolute;
+	width: 347px;
+	height: 100vh;
+	left: 0px;
+	top: 0px;
+	/* background-color: #f0f0f0; */
+    padding: 0px;
+	font-size: 20px;
+	text-align: left;
+	font-family: Poppins;
+	overflow-y: auto;
+	position: sticky;
+	background-color: #FCF7F5;
+
+}
+#sidebar{
+	fill: rgba(253,252,251,1);
+}
+#brown_bg{
+	position:absolute;
+	width: 347px;
+	height: 85px;
+	border: none;
+    top: 0;
+    left: 0;
+	bottom: 10px;
+}
+.brown_background {
+	filter: drop-shadow(9px 3px 16px rgba(0, 0, 0, 0.161));
+	overflow: visible;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 85px;
+}
+#brown_background {
+	fill: #5B2811;
+}
+
+#Logo {
+	position: absolute;
+	width: 260px;
+	height: 42px;
+	left: 33px;
+	top: 22px;
+	overflow: visible;
+}
+#logo {
+	position: absolute;
+	width: 260px;
+	height: 42px;
+	left: 0px;
+    overflow: visible;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+	margin-top: 20px;
+}
+.navigation{
+	position: absolute;
+	top: 100px;
+	width: 340px;
+
+}
+.sidebar li {
+	padding: 10px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.sidebar li a {
+    text-decoration: none; 
+    color: #4a2f1b; 
+}
+
+.navigation li img {
+	width: 25px;
+	margin-right: 10px;
+	pointer-events: none; 
+  }
+
+.sidebar .selected {
+	background-color:#724B39;
+	color: white; 
+
+  }
+
+  .navigation li:hover {
+	background-color: #5B2811;
+	color: #fff;
+  }
+  .sidebar .navigation li:hover a, 
+  .sidebar .navigation li.selected a{
+	color: #fff;
+  }
+
+  .sidebar .navigation li:hover img,
+ .sidebar .navigation li.selected img {
+	filter:brightness(0) invert(1) sepia(0) saturate(5) hue-rotate(150deg); 
+  }
+
+
+  #header {
+	position: absolute;
+	width: 1920px;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	position: sticky;
+	
+}
+#White_strip_header {
+	fill: #724B39
+}
+.White_strip_header {
+	position: absolute;
+	overflow: visible;
+	width: 100%;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+	
+}
+#search_rect{
+	position:absolute;
+	width: 340px;
+	height:40px;
+	left:1284px;
+	top:23px;
+	overflow:visible
+}
+
+#Rectangle_for_search_icon{
+	opacity: 0.17;
+	fill: rgba(252,247,245,1);
+	stroke: rgba(242,240,239,1);
+	stroke-width: 1px;
+	
+
+}
+.Rectangle_for_search_icon{
+	box-shadow: 0px 0px, 8px, #ddd;
+	filter: drop-shadow(0px 3px 6px rgba(170, 164, 164, 0.161));
+	position: absolute;
+	overflow: visible;
+	width: 364px;
+	height: 58px;
+	left: 0px;
+	top: 0px;
+
+}
+input{
+background-color: transparent;
+border: none;
+height: 100%;
+width: 100%;
+font-size: 1.25rem;
+margin-left: 5px;
+
+}
+#search_icon_rect{
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	left: 308px;
+	top: 7px;
+	overflow: visible;
+}
+#Boundary_jo {
+	opacity: 0;
+	fill: rgba(253,252,251,1);
+}
+.Boundary_jo {
+	position: absolute;
+	overflow: visible;
+	width: 26px;
+	height: 26px;
+	left: 0px;
+	top: 0px;
+}
+#search_icon {
+	fill: rgba(253,252,251,1);
+}
+.search_icon {
+	overflow: visible;
+	position: absolute;
+	width: 19.5px;
+	height: 19.5px;
+	left: 3px;
+	top: 3.102px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.fa-search {
+	color: white;
+}
+
+#Registration_jq {
+	left: 450px;
+	top: 23px;
+	position: absolute;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(254,251,250,1);
+	text-transform: capitalize;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for responsive
+@media (max-width: 768px) {
+	.adminContainer {
+	  flex-direction: column;
+	}
+  
+	.sidebar {
+	  width: 100%;
+	  position: relative;
+	}
+  
+	.content {
+	  width: 100%;
+	  padding: 20px;
+	}
+  }
+  
+  /* Additional CSS for logo display 
+  @media (max-width: 768px) {
+	.adminContainer {
+	  align-items: center;
+	  justify-content: flex-start;
+	}
+  
+	.sidebar {
+	  display: none;
+	}
+  } 
+  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+
+}
+
+.component_full {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	
+}
+
+#header{
+	position:absolute;
+	width:1920px;
+	height:85px;
+	left:0px;
+	top:0px;
+	overflow:visible
+}
+
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  
+
+
+.sidebar .navigation li img{
+     width: 30px;
+     padding-right: 10px ;
+	
+
+}
+
+
+
+
+
+
+
+
+
+.courses{
+	position:absolute;
+	width:1054px;
+	height:54px;
+	left:363px;
+	top:112px;
+	overflow:visible;
+}
+
+
+.course1{
+	position:absolute;
+	left:55px;
+	top:0px;
+	overflow:visible;
+	padding: 13px 25px 13px 25px;
+}
+#Rectangle_1 {
+	fill: rgba(243,226,200,1);
+	stroke: rgba(91,40,17,1);
+	stroke-width: 2px;
+	
+}
+.Rectangle_1 {
+	position: absolute;
+	overflow: visible;
+	left: 0px;
+	top: 0px;
+}
+#Personalised__Group_Facilitation {
+	left: 25px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 200px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(57,42,35,1);
+}
+#course2 {
+	position: absolute;
+	left: 550px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+	padding: 13px 25px 13px 25px;
+}
+
+#Rectangle_2 {
+	fill: rgba(243,226,200,1);
+	stroke: rgba(91,40,17,1);
+	stroke-width: 2px;
+	
+	
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	left: 375px;
+	top: 0px;
+}
+#International_competition_hub {
+	left: 400px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 200px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(57,42,35,1);
+}
+
+#course3 {
+	position: absolute;
+	left: 730px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+	padding: 13px 25px 13px 25px;
+}
+#Rectangle_3 {
+	fill: rgba(243,226,200,1);
+	stroke: rgba(91,40,17,1);
+	stroke-width: 2px;
+	
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	left: 684px;
+	top: 0px;
+}
+#Bridge_The_Gap_Program {
+	left: 705px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 200px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(57,42,35,1);
+}
+
+
+
+
+*/
+
+
+
+
+
+  
+  

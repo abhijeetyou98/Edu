@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+
+.header {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85px; /* Adjust the height as needed */
+	width: 100%; /* Make the header 100% of the width */
+	background-color: #724B39; /* Apply the background color */
+}
+
+#search_rect {
+	position: absolute;
+	width: 50%; /* Adjust the width as needed */
+	left: 50%; /* Center the search box */
+	transform: translateX(-50%);
+	top: 23px;
+	overflow: visible;
+}
+.White_strip_header{
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    
+}
+
+#Rectangle_for_search_icon{
+	opacity: 0.17;
+	fill: rgba(252,247,245,1);
+	stroke: rgba(242,240,239,1);
+	stroke-width: 1px;
+
+}
+.Rectangle_for_search_icon{
+	filter: drop-shadow(0px 3px 6px rgba(170, 164, 164, 0.161));
+	position: absolute;
+	overflow: visible;
+	width: 364px;
+	height: 58px;
+	left: 0px;
+	top: 0px;
+
+}
+#search_icon_rect{
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	left: 308px;
+	top: 7px;
+	overflow: visible;
+}
+
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column; /* Stack content in small screens */
+		height: auto; /* Allow the height to adjust */
+	}
+	#search_rect {
+		position: static; /* Remove absolute positioning */
+		width: 100%; /* Take full width in small screens */
+		transform: none; /* Reset transform */
+		margin-top: 10px; /* Add some spacing */
+	}
+}
+
+#Boundary_jo {
+	opacity: 0;
+	fill: rgba(253,252,251,1);
+}
+.Boundary_jo {
+	position: absolute;
+	overflow: visible;
+	width: 26px;
+	height: 26px;
+	left: 0px;
+	top: 33.1px;
+}
+#search_icon {
+	fill: rgba(253,252,251,1);
+}
+.search_icon {
+	overflow: visible;
+	position: absolute;
+	width: 19.5px;
+	height: 19.5px;
+	left: 3px;
+	top: 3.102px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Boundary_jo.fa-search {
+	color: white;
+	left: 1595px;
+	top: 33.1px;
+}

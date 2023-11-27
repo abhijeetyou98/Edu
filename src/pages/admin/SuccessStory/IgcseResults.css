@@ -1,0 +1,13 @@
+/* IgcseResults.css */
+
+.result {
+    background-color: #f0f0f0; /* Set the background color for the result div */
+    padding: 20px; /* Add some padding to the result div */
+    text-align: center; /* Center the text within the div */
+  }
+  
+  .result h1 {
+    font-size: 24px; /* Set the font size for the h1 element */
+    color: #333; /* Set the text color for the h1 element */
+  }
+  
