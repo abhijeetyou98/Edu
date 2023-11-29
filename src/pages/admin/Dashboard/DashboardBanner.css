@@ -1,0 +1,364 @@
+/* SuccessStories.css */
+.main-container {
+    background-color: #FCF7F5;
+}
+
+.leftContainer {
+    background-color: #FCF7F5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    float: left;
+    background-color: #FCF7F5;
+    margin-bottom: 10px;
+}
+
+.button-container+.leftContainer {
+    margin-bottom: 5px;
+}
+
+.button-container+.SideButton {
+    margin: 20px;
+}
+
+.bannerBtn,
+.ibdpRbtn,
+.mypRbtn,
+.igcseRbtn,
+.competitionbtn {
+    width: 175px;
+    height: 54px;
+    background: #FFF;
+    /* Initial background color (white) */
+    border: 2px solid #724B39;
+    border-radius: 10px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #392A23;
+    text-decoration: none;
+    /* Remove underline */
+    font-size: var(--unnamed-font-size-20);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-family: var(--unnamed-font-family-poppins);
+    line-height: var(--unnamed-line-spacing-30);
+    transition: 0.3s;
+    /* Add smooth transition */
+}
+
+.bannerBtn:hover,
+.ibdpRbtn:hover,
+.mypRbtn:hover,
+.igcseRbtn:hover,
+.competitionbtn:hover {
+    background: #F3E2C8;
+    /* Change background color on hover */
+}
+
+.bannerBtn:active,
+.ibdpRbtn:active,
+.mypRbtn:active,
+.igcseRbtn:active,
+.competitionbtn:active {
+    background: #F3E2C8;
+    /* Keep the same color when clicked */
+}
+
+.mypRbtn {
+    left: 664px;
+}
+
+.igcseRbtn {
+    left: 825px;
+}
+
+.competitionbtn {
+    left: 1004px;
+}
+
+/* Add CSS to control the height of the Jodit Editor */
+.jodit-editor {
+    height: 100px;
+    /* Set the desired height here, e.g., 400 pixels */
+}
+
+.border {
+    box-shadow: 2px 2px 10px #C2BDBD47;
+    top: 182px;
+    left: 364px;
+    width: 1291px;
+    height: 776px;
+    background: #FDFCFB 0% 0% no-repeat padding-box;
+    /* Set the background color */
+    box-shadow: 2px 2px 10px #C2BDBD47;
+    border: 1px solid #E2E0E0;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.jodit-editor {
+    top: 234px;
+    left: 390px;
+    width: 599px;
+    height: 234px;
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.editor-container1 {
+    top: 234px;
+    left: 390px;
+    width: 599px;
+    height: 234px;
+    float: left;
+    background: #FDFCFB 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E0E0;
+    border-radius: 6px;
+}
+
+/* Reduce the margin between the two editors */
+.editor-container1+.editor-container2 {
+    margin-left: 40px;
+    /* Decrease the margin as needed */
+}
+
+.leftContainer+.SideButton {
+    margin-left: 40px;
+    /* Decrease the margin as needed */
+
+}
+
+.editor-container2 {
+    float: right;
+}
+
+.rectangular-button {
+    text-size-adjust: 10px;
+    width: 601px;
+    height: 44px;
+    background-color: white;
+    /* Background color for the button */
+    background: var(--unnamed-color-fcf7f5) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-724b3933);
+    background: #FCF7F5 0% 0% no-repeat padding-box;
+    box-shadow: inset 2px 2px 6px #00000029;
+    border: 1px solid #724B3933;
+    border-radius: 5px;
+    opacity: 1;
+    margin-bottom: 30px;
+    /* Add margin at the bottom of the .rectangular-button */
+
+}
+
+.SideButton {
+    position: absolute;
+    justify-self: end;
+    top: 30px;
+    left: 1350px;
+    width: 194px;
+    height: 259px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SaveTheChangesBtn {
+    top: 112px;
+    left: 1690px;
+    width: 194px;
+    height: 52px;
+    background: var(--unnamed-color-724b39);
+    border: 1px solid #724B39;
+    background: #724B39 0% 0% no-repeat padding-box;
+
+}
+
+.leftContainer {
+    float: left;
+    border-color: #C2BDBD47;
+}
+
+.SaveTheChangesBtn,
+.ResetAllBtn,
+.PreviewPageBtn,
+.PublishUnpublishBtn {
+    /* Add your button styles here */
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 1;
+    width: 175px;
+    height: 54px;
+    background: #FFF;
+    /* Initial background color (white) */
+    border: 2px solid #724B39;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #392A23;
+    border-color: #724B39;
+    margin: 5px 0;
+    /* Add vertical margin between buttons */
+
+    font-size: var(--unnamed-font-size-20);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-family: var(--unnamed-font-family-poppins);
+    line-height: var(--unnamed-line-spacing-30);
+    cursor: pointer;
+}
+
+.SaveTheChangesBtn:hover,
+.ResetAllBtn:hover,
+.PreviewPageBtn:hover {
+    background: #724B39;
+    color: white;
+}
+
+.PublishUnpublishBtn:hover,
+.dropbtn:hover {
+    background: #F3E2C8
+}
+
+.SaveTheChangesBtn:active,
+.ResetAllBtn:active,
+.PreviewPageBtn:active {
+    background: #724B39;
+    color: #724B39;
+}
+
+.PublishUnpublishBtn:active,
+.dropbtn:active {
+    background: #F3E2C8
+}
+
+/* Prevent option color change on hover */
+.PublishUnpublishBtn select {
+    background-color: transparent;
+    /* Set the background color to transparent */
+    color: #392A23;
+    /* Set the text color */
+}
+
+.PublishUnpublishBtn select option:hover {
+    background-color: transparent;
+    /* Set the background color to transparent on hover */
+}
+
+.card {
+    padding: 10px;
+    box-shadow: 0 0 5px #ffdfdf;
+    border: 1px dashed #BBB7B7;
+    overflow: hidden;
+}
+
+.card .top {
+    text-align: center;
+}
+
+.card p {
+    font-weight: bold;
+    color: #724B39;
+}
+
+.card button {
+    outline: 0;
+    border: 0;
+    color: #140202;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 8px 13px;
+    width: 100%;
+    background: #FCF7F5;
+    font-style: italic;
+}
+
+.card .drag-area {
+    height: 150px;
+    border-radius: 5px;
+    border: 2px dash #724B39;
+    color: #724B39;
+    background: #FCF7F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-top: 10px;
+}
+
+.card .drag-area .visible {
+    font-size: 18px;
+}
+
+.card .select {
+    color: #392A23;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .select:hover {
+    opacity: 0.6;
+}
+
+.card .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.card .container .image {
+    width: 75px;
+    margin-right: 5px;
+    height: 75px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.card .container .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card .container .image span {
+    position: absolute;
+    top: -2px;
+    right: 9px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card input,
+.card .drag-area .on-drop,
+.card .drag-area .dragover .visible {
+    display: none;
+}
+
+.delete {
+    z-index: 999;
+    color: #392A23;
+}
+
+.leftContainer {
+    margin-right: 20px;
+    background-color: #FCF7F5;
+
+}
+
+.editor-container1,
+.editor-container2 {
+    padding: 20px;
+}

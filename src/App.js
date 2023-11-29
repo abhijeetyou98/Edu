@@ -66,8 +66,10 @@ import Content from './pages/admin/Content';
               <Route path="/MypResults" element={<MypResults/>}/>
               <Route path="/CompetitionResult" element={<CompetitionResult/>}/>
             </Routes>
-            
-            </Content>
+                
+
+
+              </Content>
             </div>
         </Router>
      

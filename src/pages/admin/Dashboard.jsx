@@ -1,11 +1,12 @@
 import React from 'react'
+import DashboardBanner from './Dashboard/DashboardBanner'
 
 function Dashboard() {
   return (
-    <div>
- <h1>Dashboard Page</h1>
+    
+ <DashboardBanner />
 
-    </div>
+    
 
   )
 }
