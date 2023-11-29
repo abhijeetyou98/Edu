@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react' 
 import PersonalisedBanner from './PersonalisedBanner'
 
 const PersonalisedGroupFacilitation = () => {
   return (
     <div>
-    <PersonalisedBanner/>
-      
+      <PersonalisedBanner/>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-function Dashboardcommondiv() {
+function CommonPersonalizedDiv() {
 
   return (
     <div className='commonDiv'>
@@ -7,17 +7,20 @@ function Dashboardcommondiv() {
       <a href='/Banner' className='bannerBtn'>
         Banner
       </a>
-      <a href='DashboardAboutInstitute' className='bannerBtn'>
-      About Institute
+      <a href='/IBDPResultsPage' className='ibdpRbtn'>
+      Categories
       </a>
       <a href='MypResults' className='mypRbtn'>
       Courses
       </a>
       <a href='IgcseResults' className='igcseRbtn'>
-      Results
+      Testimonial
       </a>
       <a href='CompetitionResult' className='competitionbtn'>
-      Testimonial
+        Results
+      </a>
+      <a href='CompetitionResult' className='competitionbtn'>
+        FAQS
       </a>
     </div>
     
@@ -26,4 +29,4 @@ function Dashboardcommondiv() {
   )
 }
 
-export default Dashboardcommondiv;
+export default CommonPersonalizedDiv;

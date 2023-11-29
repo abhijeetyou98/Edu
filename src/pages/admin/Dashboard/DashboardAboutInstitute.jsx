@@ -1,56 +1,58 @@
 import React, { useState, useRef, useEffect } from 'react';
 import JoditEditor from 'jodit-react';
 import axios from 'axios';
-import CommonPersonalizedDiv from './CommonPersonalizedDiv';
+import Dashboardcommondiv from './Dashboardcommondiv';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function PersonalisedBanner() {
-  const [images, setPersonalisedImages] = useState([]);
-  const [isDragging, setPersonalisedIsDragging] = useState(false);
+
+function DashboardAboutInstitute() {
+  const [images, setDashboardImages] = useState([]);
+  const [isDragging, setDashboardIsDragging] = useState(false);
   const fileInputRef = useRef(null);
   const heading_editor = useRef(null);
   const text_editor = useRef(null);
-  const [banner_heading, setPersonalisedBannerHeading] = useState('');
-  const [banner_text, setPersonalisedBannerText] = useState('');
-  const [button_text, setPersonalisedButtonText] = useState('');
-  const [button_url, setPersonalisedButtonUrl] = useState('');
-  const [banner_status, setPersonalisedBannerStatus] = useState('');
+  const [banner_heading, setDashboardBannerHeading] = useState('');
+  const [banner_text, setDashboardBannerText] = useState('');
+  const [button_text, setDashboardButtonText] = useState('');
+  const [button_url, setDashboardButtonUrl] = useState('');
+  const [banner_status, setDashboardBannerStatus] = useState('');
   const config = {};
 
 // Function to reset all data
 const resetAllData = () => {
-  setPersonalisedImages(null); // Reset the images state to null
-  setPersonalisedBannerHeading(null); // Reset banner_heading to null
-  setPersonalisedBannerText(null); // Reset banner_text to null
-  setPersonalisedButtonText(null); // Reset button_text to null
-  setPersonalisedButtonUrl(null); // Reset button_url to null
-  setPersonalisedBannerStatus(null); // Reset banner_status to null
+  setDashboardImages(null); // Reset the images state to null
+  setDashboardBannerHeading(null); // Reset banner_heading to null
+  setDashboardBannerText(null); // Reset banner_text to null
+  setDashboardButtonText(null); // Reset button_text to null
+  setDashboardButtonUrl(null); // Reset button_url to null
+  setDashboardBannerStatus(null); // Reset banner_status to null
 }
 
 
   function onDrop(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(false);
+    setDashboardIsDragging(false);
     const files = event.dataTransfer.files;
 
     // Handle dropped files (images)
     const newImages = Array.from(files).filter((file) => file.type.startsWith('image/'));
-    setPersonalisedImages((prevImages) => [...prevImages, ...newImages]);
+    setDashboardImages((prevImages) => [...prevImages, ...newImages]);
   }
 
   function deleteImage(index) {
     const updatedImages = [...images];
     updatedImages.splice(index, 1);
-    setPersonalisedImages(updatedImages);
+    setDashboardImages(updatedImages);
   }
 
   function onDragLeave(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(false);
+    setDashboardIsDragging(false);
   }
 
   function onDragOver(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(true);
+    setDashboardIsDragging(true);
     event.dataTransfer.dropEffect = 'copy';
   }
 
@@ -62,27 +64,27 @@ const resetAllData = () => {
     const files = event.target.files;
     if (files.length === 0) return;
     const newImages = Array.from(files).filter((file) => file.type.startsWith('image/'));
-    setPersonalisedImages((prevImages) => [...prevImages, ...newImages]);
+    setDashboardImages((prevImages) => [...prevImages, ...newImages]);
   }
 
   const handleHeadingEditorChange = (headingData) => {
-    setPersonalisedBannerHeading(headingData);
+    setDashboardBannerHeading(headingData);
   };
 
   const handleTextEditorChange = (bannerTextData) => {
-    setPersonalisedBannerText(bannerTextData);
+    setDashboardBannerText(bannerTextData);
   };
 
   const handleButtonUrlChange = (buttonURLData) => {
-    setPersonalisedButtonUrl(buttonURLData);
+    setDashboardButtonUrl(buttonURLData);
   }
 
   const handleButtonTextChange = (buttonTextData) => {
-    setPersonalisedButtonText(buttonTextData);
+    setDashboardButtonText(buttonTextData);
   }
 
   const handleStatusChange = (event) => {
-    setPersonalisedBannerStatus(event.target.value === 'Publish');
+    setDashboardBannerStatus(event.target.value === 'Publish');
   };
 
   const formData = new FormData();
@@ -154,9 +156,10 @@ const resetAllData = () => {
   }, []);
 
   return (
+    
     <div className='main-container'>
       <div className='button-container'>
-      <CommonPersonalizedDiv />
+      <Dashboardcommondiv/>
       </div>
 
       <div className='leftContainer'>
@@ -172,65 +175,61 @@ const resetAllData = () => {
                 onBlur={(headingData) => handleHeadingEditorChange(headingData)}
               />
             </div>
+
+
+
+
+
+
+
+            <div>
             <div className='ButtonText'>
-  <span>Button Text</span>
+  <span>Number</span>
   <div
     className='rectangular-button'
     contentEditable='true'
     onInput={(e) => handleButtonTextChange(e.target.textContent)}
   ></div>
 </div>
+<div className='ButtonUrl'>
+              <span>Extra Info</span>
+              <div className='rectangular-button'
+              contentEditable='true'
+              onInput={(e) => handleButtonUrlChange(e.target.textContent)}>
 
-            <div>
-            <p>Background Image</p>
-            <div className='card'>
-              <div className='top'>
-                <p>Drag & Drop image uploading</p>
               </div>
-              <div
-                className='drag-area'
-                onDragOver={onDragOver}
-                onDragLeave={onDragLeave}
-                onDrag={onFileSelect}
-                onDrop={onDrop}
-              >
-                {isDragging ? (
-                  <span className='select'>Drop image here</span>
-                ) : (
-                  <>
-                    Drag & Drop image here or{" "}
-                    <span className='select' role='button' onClick={selectFiles}>
-                      Browse
-                    </span>
-                  </>
-                )}
+            </div>
 
-                <input
-                  name='file'
-                  className='file'
-                  type='file'
-                  multiple
-                  ref={fileInputRef}
-                  onChange={onFileSelect}
-                ></input>
+
+            </div>
+
+
+
+
+
+
+
+
+            <div className='ButtonText'>
+  <span>Number</span>
+  <div
+    className='rectangular-button'
+    contentEditable='true'
+    onInput={(e) => handleButtonTextChange(e.target.textContent)}
+  ></div>
+</div>
+<div className='ButtonUrl'>
+              <span>Extra Info</span>
+              <div className='rectangular-button'
+              contentEditable='true'
+              onInput={(e) => handleButtonUrlChange(e.target.textContent)}>
+
               </div>
-              <div className='container'>
-                {images.map((image, index) => (
-                  <div className='image' key={index}>
-                    <span className='delete' onClick={() => deleteImage(index)}>
-                      &times;
-                    </span>
-                    <img src={URL.createObjectURL(image)} alt={`${index}`} />
-                  </div>
-                ))}
-              </div> 
-              <button type='button' onClick={uploadImage}>Upload</button>
-              </div>
-          </div>      
+            </div>    
         </div>
 
-          <div className='editor-container2'>
-            <span>Banner Text</span>
+          <div className='editor-container2 '>
+            <span>Number</span>
             <div className='jodit-editor'>
               <JoditEditor
                 ref={text_editor}
@@ -241,13 +240,40 @@ const resetAllData = () => {
               />
             </div>
             <div className='ButtonUrl'>
-              <span>Button URL</span>
+              <span>Number</span>
               <div className='rectangular-button'
               contentEditable='true'
               onInput={(e) => handleButtonUrlChange(e.target.textContent)}>
 
               </div>
             </div>
+            <div className='ButtonUrl'>
+              <span>Extra Info</span>
+              <div className='rectangular-button'
+              contentEditable='true'
+              onInput={(e) => handleButtonUrlChange(e.target.textContent)}>
+
+              </div>
+            </div>
+
+
+            <div className='ButtonText'>
+  <span>Number</span>
+  <div
+    className='rectangular-button'
+    contentEditable='true'
+    onInput={(e) => handleButtonTextChange(e.target.textContent)}
+  ></div>
+</div>
+<div className='ButtonUrl'>
+              <span>Extra Info</span>
+              <div className='rectangular-button'
+              contentEditable='true'
+              onInput={(e) => handleButtonUrlChange(e.target.textContent)}>
+
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -269,4 +295,4 @@ const resetAllData = () => {
   );
 }
 
-export default PersonalisedBanner;
+export default DashboardAboutInstitute;

@@ -11,9 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './pages/admin/Dashboard';
 import NavigationBar from './pages/admin/NavigationBar';
 import Announcements from './pages/admin/Announcements';
-import PersonalisedGroupFacilitation from './pages/admin/PersonalisedGroupFacilitation';
-import InternationalCompetitionHub from './pages/admin/International_Competition_Hub';
-import BridgeTheGapProgram from './pages/admin/Bridge_The_Gap_Program';
+import PersonalisedGroupFacilitation from './pages/admin/PersonalisedGroupFacilitation/PersonalisedBanner';
+import InternationalCompetitionHub from './pages/admin/InternationalCompetitionHub/InternationalCompetitionHubBanner';
+import BridgeTheGapProgram from './pages/admin/BridgeTheGapProgram/BridgeTheGapProgramBanner';
 // import SuccessStories from './pages/admin/SuccessStory/SuccessStories';
 import IBDPResultsPage from './pages/admin/SuccessStory/IBDPResultsPage';
 import AddNewIbdpResult from './pages/admin/SuccessStory/AddNewIbdpResult' ;
@@ -21,6 +21,7 @@ import Banner from './pages/admin/SuccessStory/Banner';
 import IgcseResults from './pages/admin/SuccessStory/IgcseResults';
 import MypResults from './pages/admin/SuccessStory/MypResults';
 import CompetitionResult from './pages/admin/SuccessStory/CompetitionResult';
+import DashboardAboutInstitute from './pages/admin/Dashboard/DashboardAboutInstitute'
 
 import Registration from './pages/admin/Registration';
 import AboutUs from './pages/admin/AboutUs';
@@ -60,6 +61,8 @@ import Content from './pages/admin/Content';
 
             <Routes>
               <Route path= "/Banner" element={<Banner/>}/>
+              <Route path= '/DashboardAboutInstitute' element={<DashboardAboutInstitute/>}/>  
+
               <Route path = "/IBDPResultsPage" element={<IBDPResultsPage/>}/>
               <Route path = "/AddNewIbdpResult" element={<AddNewIbdpResult/>}/>
               <Route path="/IgcseResults" element={<IgcseResults/>}/>

@@ -1,5 +1,4 @@
 import React from 'react'
-import './commonDiv.css'
 function CommonPersonalizedDiv() {
 
   return (

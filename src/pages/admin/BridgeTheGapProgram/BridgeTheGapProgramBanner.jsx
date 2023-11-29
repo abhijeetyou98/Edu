@@ -1,56 +1,56 @@
 import React, { useState, useRef, useEffect } from 'react';
 import JoditEditor from 'jodit-react';
 import axios from 'axios';
-import CommonPersonalizedDiv from './CommonPersonalizedDiv';
+import CommonBridgeDiv from './CommonBridgeDiv';
 
-function PersonalisedBanner() {
-  const [images, setPersonalisedImages] = useState([]);
-  const [isDragging, setPersonalisedIsDragging] = useState(false);
+function BridgeTheGapProgramBanner() {
+  const [images, setBridgeImages] = useState([]);
+  const [isDragging, setBridgeIsDragging] = useState(false);
   const fileInputRef = useRef(null);
   const heading_editor = useRef(null);
   const text_editor = useRef(null);
-  const [banner_heading, setPersonalisedBannerHeading] = useState('');
-  const [banner_text, setPersonalisedBannerText] = useState('');
-  const [button_text, setPersonalisedButtonText] = useState('');
-  const [button_url, setPersonalisedButtonUrl] = useState('');
-  const [banner_status, setPersonalisedBannerStatus] = useState('');
+  const [banner_heading, setBridgeBannerHeading] = useState('');
+  const [banner_text, setBridgeBannerText] = useState('');
+  const [button_text, setBridgeButtonText] = useState('');
+  const [button_url, setBridgeButtonUrl] = useState('');
+  const [banner_status, setBridgeBannerStatus] = useState('');
   const config = {};
 
 // Function to reset all data
 const resetAllData = () => {
-  setPersonalisedImages(null); // Reset the images state to null
-  setPersonalisedBannerHeading(null); // Reset banner_heading to null
-  setPersonalisedBannerText(null); // Reset banner_text to null
-  setPersonalisedButtonText(null); // Reset button_text to null
-  setPersonalisedButtonUrl(null); // Reset button_url to null
-  setPersonalisedBannerStatus(null); // Reset banner_status to null
+  setBridgeImages(null); // Reset the images state to null
+  setBridgeBannerHeading(null); // Reset banner_heading to null
+  setBridgeBannerText(null); // Reset banner_text to null
+  setBridgeButtonText(null); // Reset button_text to null
+  setBridgeButtonUrl(null); // Reset button_url to null
+  setBridgeBannerStatus(null); // Reset banner_status to null
 }
 
 
   function onDrop(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(false);
+    setBridgeIsDragging(false);
     const files = event.dataTransfer.files;
 
     // Handle dropped files (images)
     const newImages = Array.from(files).filter((file) => file.type.startsWith('image/'));
-    setPersonalisedImages((prevImages) => [...prevImages, ...newImages]);
+    setBridgeImages((prevImages) => [...prevImages, ...newImages]);
   }
 
   function deleteImage(index) {
     const updatedImages = [...images];
     updatedImages.splice(index, 1);
-    setPersonalisedImages(updatedImages);
+    setBridgeImages(updatedImages);
   }
 
   function onDragLeave(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(false);
+    setBridgeIsDragging(false);
   }
 
   function onDragOver(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(true);
+    setBridgeIsDragging(true);
     event.dataTransfer.dropEffect = 'copy';
   }
 
@@ -62,27 +62,27 @@ const resetAllData = () => {
     const files = event.target.files;
     if (files.length === 0) return;
     const newImages = Array.from(files).filter((file) => file.type.startsWith('image/'));
-    setPersonalisedImages((prevImages) => [...prevImages, ...newImages]);
+    setBridgeImages((prevImages) => [...prevImages, ...newImages]);
   }
 
   const handleHeadingEditorChange = (headingData) => {
-    setPersonalisedBannerHeading(headingData);
+    setBridgeBannerHeading(headingData);
   };
 
   const handleTextEditorChange = (bannerTextData) => {
-    setPersonalisedBannerText(bannerTextData);
+    setBridgeBannerText(bannerTextData);
   };
 
   const handleButtonUrlChange = (buttonURLData) => {
-    setPersonalisedButtonUrl(buttonURLData);
+    setBridgeButtonUrl(buttonURLData);
   }
 
   const handleButtonTextChange = (buttonTextData) => {
-    setPersonalisedButtonText(buttonTextData);
+    setBridgeButtonText(buttonTextData);
   }
 
   const handleStatusChange = (event) => {
-    setPersonalisedBannerStatus(event.target.value === 'Publish');
+    setBridgeBannerStatus(event.target.value === 'Publish');
   };
 
   const formData = new FormData();
@@ -156,7 +156,7 @@ const resetAllData = () => {
   return (
     <div className='main-container'>
       <div className='button-container'>
-      <CommonPersonalizedDiv />
+      <CommonBridgeDiv />
       </div>
 
       <div className='leftContainer'>
@@ -269,4 +269,4 @@ const resetAllData = () => {
   );
 }
 
-export default PersonalisedBanner;
+export default BridgeTheGapProgramBanner;

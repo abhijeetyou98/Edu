@@ -1,56 +1,56 @@
 import React, { useState, useRef, useEffect } from 'react';
 import JoditEditor from 'jodit-react';
 import axios from 'axios';
-import CommonPersonalizedDiv from './CommonPersonalizedDiv';
+import CommonInternationalDiv from './CommonInternationalDiv';
 
-function PersonalisedBanner() {
-  const [images, setPersonalisedImages] = useState([]);
-  const [isDragging, setPersonalisedIsDragging] = useState(false);
+function InternationalCompetitionHubTestimonials() {
+  const [images, setInternationalImages] = useState([]);
+  const [isDragging, setInternationalIsDragging] = useState(false);
   const fileInputRef = useRef(null);
   const heading_editor = useRef(null);
   const text_editor = useRef(null);
-  const [banner_heading, setPersonalisedBannerHeading] = useState('');
-  const [banner_text, setPersonalisedBannerText] = useState('');
-  const [button_text, setPersonalisedButtonText] = useState('');
-  const [button_url, setPersonalisedButtonUrl] = useState('');
-  const [banner_status, setPersonalisedBannerStatus] = useState('');
+  const [banner_heading, setInternationalBannerHeading] = useState('');
+  const [banner_text, setInternationalBannerText] = useState('');
+  const [button_text, setInternationalButtonText] = useState('');
+  const [button_url, setInternationalButtonUrl] = useState('');
+  const [banner_status, setInternationalBannerStatus] = useState('');
   const config = {};
 
 // Function to reset all data
 const resetAllData = () => {
-  setPersonalisedImages(null); // Reset the images state to null
-  setPersonalisedBannerHeading(null); // Reset banner_heading to null
-  setPersonalisedBannerText(null); // Reset banner_text to null
-  setPersonalisedButtonText(null); // Reset button_text to null
-  setPersonalisedButtonUrl(null); // Reset button_url to null
-  setPersonalisedBannerStatus(null); // Reset banner_status to null
+  setInternationalImages(null); // Reset the images state to null
+  setInternationalBannerHeading(null); // Reset banner_heading to null
+  setInternationalBannerText(null); // Reset banner_text to null
+  setInternationalButtonText(null); // Reset button_text to null
+  setInternationalButtonUrl(null); // Reset button_url to null
+  setInternationalBannerStatus(null); // Reset banner_status to null
 }
 
 
   function onDrop(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(false);
+    setInternationalIsDragging(false);
     const files = event.dataTransfer.files;
 
     // Handle dropped files (images)
     const newImages = Array.from(files).filter((file) => file.type.startsWith('image/'));
-    setPersonalisedImages((prevImages) => [...prevImages, ...newImages]);
+    setInternationalImages((prevImages) => [...prevImages, ...newImages]);
   }
 
   function deleteImage(index) {
     const updatedImages = [...images];
     updatedImages.splice(index, 1);
-    setPersonalisedImages(updatedImages);
+    setInternationalImages(updatedImages);
   }
 
   function onDragLeave(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(false);
+    setInternationalIsDragging(false);
   }
 
   function onDragOver(event) {
     event.preventDefault();
-    setPersonalisedIsDragging(true);
+    setInternationalIsDragging(true);
     event.dataTransfer.dropEffect = 'copy';
   }
 
@@ -62,27 +62,27 @@ const resetAllData = () => {
     const files = event.target.files;
     if (files.length === 0) return;
     const newImages = Array.from(files).filter((file) => file.type.startsWith('image/'));
-    setPersonalisedImages((prevImages) => [...prevImages, ...newImages]);
+    setInternationalImages((prevImages) => [...prevImages, ...newImages]);
   }
 
   const handleHeadingEditorChange = (headingData) => {
-    setPersonalisedBannerHeading(headingData);
+    setInternationalBannerHeading(headingData);
   };
 
   const handleTextEditorChange = (bannerTextData) => {
-    setPersonalisedBannerText(bannerTextData);
+    setInternationalBannerText(bannerTextData);
   };
 
   const handleButtonUrlChange = (buttonURLData) => {
-    setPersonalisedButtonUrl(buttonURLData);
+    setInternationalButtonUrl(buttonURLData);
   }
 
   const handleButtonTextChange = (buttonTextData) => {
-    setPersonalisedButtonText(buttonTextData);
+    setInternationalButtonText(buttonTextData);
   }
 
   const handleStatusChange = (event) => {
-    setPersonalisedBannerStatus(event.target.value === 'Publish');
+    setInternationalBannerStatus(event.target.value === 'Publish');
   };
 
   const formData = new FormData();
@@ -156,7 +156,7 @@ const resetAllData = () => {
   return (
     <div className='main-container'>
       <div className='button-container'>
-      <CommonPersonalizedDiv />
+      <CommonInternationalDiv />
       </div>
 
       <div className='leftContainer'>
@@ -269,4 +269,4 @@ const resetAllData = () => {
   );
 }
 
-export default PersonalisedBanner;
+export default InternationalCompetitionHubTestimonials;
