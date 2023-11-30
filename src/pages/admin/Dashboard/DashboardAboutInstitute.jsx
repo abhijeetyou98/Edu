@@ -182,7 +182,7 @@ const resetAllData = () => {
 
 
 
-            <div>
+            <div style={{background:"white", border:"2px solid", padding:"10px"}}>
             <div className='ButtonText'>
   <span>Number</span>
   <div
